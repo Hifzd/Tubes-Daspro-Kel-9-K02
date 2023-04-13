@@ -25,7 +25,7 @@ def splitter (opfile, pemisah):
             return baris
 
 def konso(lis, value):                             # Memasukkan elemen baru ke dalam list
-    lis[len(lis):] = [value]
+    lis[pjglist(lis):] = [value]
     return lis
 
 def pjglist(lis):
