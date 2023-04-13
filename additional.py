@@ -49,5 +49,5 @@ def pjglist(lis):
                         petik = 1
                 if listring[i] == ',' and petik == 0:
                     count += 1
-            return count + 1
+            return count + 2
             
