@@ -1,5 +1,5 @@
 # File: main.py
-from F13 import load
+import F13
 import commands
 import argparse
 
@@ -13,11 +13,15 @@ candi = [] # Matriks data candi
 bahan_bangunan = [] # Data bahan bangunan
 userdata = ['' for i in range (3)]
 
-users = load(args.folder, 'user.csv')
-candi = load(args.folder, 'candi.csv')
-bahan_bangunan = load(args.folder, 'bahan_bangunan.csv')
+if F13.valid(args.folder):
+  users = F13.load(args.folder, 'user.csv')
+  candi = F13.load(args.folder, 'candi.csv')
+  bahan_bangunan = F13.load(args.folder, 'bahan_bangunan.csv')
+  
+else:
+  F13.error(args.folder)
 
-while True:
+while F13.valid:
   masukan = input(">>> ")
   if masukan == 'exit':
     break
