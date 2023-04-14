@@ -1,13 +1,18 @@
 from additional import splitter
 
 def valid(folder):
-    if not(EOFError(open(f'{folder}/user.csv', 'r'))):
-        print('''Loading...
+    try:
+        with open(f'{folder}/user.csv', 'r') as f:
+            print('''Loading...
     Selamat datang di program “Manajerial Candi”
     Silahkan masukkan username Anda''')
-        return True
-    else:
-        print(f'Folder “{folder}” tidak ditemukan.')
+            return True
+    except FileNotFoundError:
+        if folder == "":
+            print('''Tidak ada nama folder yang diberikan!
+Usage: python main.py <nama_folder>''')
+        else :
+            print(f'Folder "{folder}" tidak ditemukan.')
         return False
 
 def load(folder, csv):
