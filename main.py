@@ -6,22 +6,20 @@ import argparse
 parser = argparse.ArgumentParser()
 parser.add_argument("folder")
 args = parser.parse_args()
+valid = F13.valid(args.folder)
 
-# Anggap semua fungsi yang dipanggil merupakan fungsi yang sudah dibuat sendiri pada modul lain
+# Anggap semua fungsi yang dipanggil mesrupakan fungsi yang sudah dibuat sendiri pada modul lain
 users = [] # Matriks data user
 candi = [] # Matriks data candi
 bahan_bangunan = [] # Data bahan bangunan
 userdata = ['' for i in range (3)]
 
-if F13.valid(args.folder):
+if valid:
   users = F13.load(args.folder, 'user.csv')
   candi = F13.load(args.folder, 'candi.csv')
   bahan_bangunan = F13.load(args.folder, 'bahan_bangunan.csv')
-  
-else:
-  F13.error(args.folder)
 
-while F13.valid:
+while valid:
   masukan = input(">>> ")
   if masukan == 'exit':
     break
