@@ -25,11 +25,10 @@ def summonjin(users):
         usrnjin = input('Masukkan username jin : ')
         for i in range(pjglist(users)):
             if usrnjin == users[i][0]:
+                print(f'Username "{usrnjin}" sudah diambil!')
+                print()
                 break
-        if usrnjin == users[i][0]:
-            print(f'Username "{usrnjin}" sudah diambil!')
-            print()
-        else:
+        if usrnjin != users[i][0]:
             break
         
     while True:

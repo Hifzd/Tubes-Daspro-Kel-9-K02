@@ -4,7 +4,7 @@ def splitter (opfile, pemisah):
 
     else:
         pemisah1 = '\n'
-        pemisah2 = ';'
+        pemisah2 = ';' or ','
         count = 1
         for chr in opfile:
             if chr == pemisah:
@@ -41,13 +41,15 @@ def pjglist(lis):
             return count
         else:
             for i in range(1,len(listring)):
-                petik = 0
                 if listring[i] == "'":
-                    if petik == 1:
-                        petik = 0
-                    else:
-                        petik = 1
-                if listring[i] == ',' and petik == 0:
                     count += 1
-            return count + 1
+            return count/2
+                # petik = 0
+                # if listring[i] == "'":
+                #     if petik == 1:
+                #         petik = 0
+                #     else:
+                #         petik = 1
+                # if listring[i] == ',' and petik == 0:
+                #     count += 1
             

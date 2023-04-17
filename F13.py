@@ -7,7 +7,7 @@ def valid(folder):
         print('''Loading...
 
 Selamat datang di program “Manajerial Candi”
-Silahkan masukkan username Anda''')
+Silahkan ketik login dan masukkan username Anda''')
         return True
     except IOError:
         if folder == "":
