@@ -51,7 +51,6 @@ def pjglist(lis):
 
 def konso(lis, value):
     pjgawal = pjglist(lis)
-    print(pjgawal)
     newlis = [0 for i in range(pjgawal+1)]                           # Memasukkan elemen baru ke dalam list
     for i in range(pjgawal):
         newlis[i] = lis[i]

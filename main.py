@@ -22,8 +22,6 @@ if valid:
   candi = F13.load(args.folder, 'candi.csv')
   bahan_bangunan = F13.load(args.folder, 'bahan_bangunan.csv')
 
-print(str(users))
-
 while valid:
   masukan = input(">>> ")
   if masukan == 'exit':
