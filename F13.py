@@ -22,4 +22,5 @@ Usage: python main.py <nama_folder>''')
 def load(folder, csv):
     dat = open(f'{folder}/{csv}', 'r')
     matrix = splitter(dat.read(), '\n')
+    dat.close()
     return matrix
