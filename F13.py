@@ -1,7 +1,8 @@
 from additional import splitter
+import os
 
 def valid(folder):
-    try:
+    if os.path.isdir(folder):
         f = open(f'{folder}/user.csv', 'r')
         f.close()
         print('''Loading...
@@ -9,12 +10,12 @@ def valid(folder):
 Selamat datang di program “Manajerial Candi”
 Silahkan ketik login dan masukkan username Anda''')
         return True
-    except IOError:
+        
+    else:
         if folder == "":
             print('''Tidak ada nama folder yang diberikan!
 
 Usage: python main.py <nama_folder>''')
-
         else :
             print(f'Folder "{folder}" tidak ditemukan.')
         return False

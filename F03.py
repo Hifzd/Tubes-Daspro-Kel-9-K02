@@ -12,9 +12,9 @@ def jinless100(users, golongan):
             if users[2] == golongan:
                 count+=1
     
-    if count <= 100:
+    if count <= 6:
         return True
-    elif count > 100:
+    elif count > 6:
         print('Jumlah Jin telah maksimal! (100 jin). Bandung tidak dapat men-summon lebih dari itu')
         return False
 
@@ -65,5 +65,5 @@ def summonjin(users):
         jinbaru = [usrnjin, pwdjin, rolejin]
         #users.append(jinbaru)
         print(f'Jin {usrnjin} berhasil dipanggil')
-
-        return konso(users, jinbaru)
+        users = konso(users, jinbaru)
+        return users

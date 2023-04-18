@@ -5,7 +5,7 @@ import argparse
 import os
 
 parser = argparse.ArgumentParser()
-parser.add_argument("folder")
+parser.add_argument("folder", default='', nargs='?')
 args = parser.parse_args()
 
 valid = F13.valid(args.folder)
@@ -15,7 +15,6 @@ users = [] # Matriks data user
 candi = [] # Matriks data candi
 bahan_bangunan = [] # Data bahan bangunan
 userdata = ['' for i in range (3)]
-
 
 if valid:
   users = F13.load(args.folder, 'user.csv')
@@ -29,5 +28,3 @@ while valid:
   else:
     commands.run(masukan, users, candi, bahan_bangunan, userdata)
     print()
-
-    

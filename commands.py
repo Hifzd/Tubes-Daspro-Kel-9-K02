@@ -8,7 +8,7 @@ def run(masukan, users, candi, bahan_bangunan, userdata):
     elif masukan == 'logout':
         userdata = logout(userdata)
     elif masukan == 'summonjin':
-        if userdata[2] == "bandung_bondowoso":
+        # if userdata[2] == "bandung_bondowoso":
                 users = summonjin(users)
-        else:
-            print('Hanya Sang Bondowoso yang bisa memanggil para Jin!')
+        # else:
+            # print('Hanya Sang Bondowoso yang bisa memanggil para Jin!')
