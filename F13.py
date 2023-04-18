@@ -3,8 +3,6 @@ import os
 
 def valid(folder):
     if os.path.isdir(folder):
-        f = open(f'{folder}/user.csv', 'r')
-        f.close()
         print('''Loading...
 
 Selamat datang di program “Manajerial Candi”
@@ -23,5 +21,4 @@ Usage: python main.py <nama_folder>''')
 def load(folder, csv):
     dat = open(f'{folder}/{csv}', 'r')
     matrix = splitter(dat.read(), '\n')
-    dat.close()
     return matrix

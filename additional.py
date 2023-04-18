@@ -37,22 +37,21 @@ def pjglist(lis):
             return count
         else:
             for i in range(1,len(listring)):
+                petik = 0
                 if listring[i] == "'":
+                    if petik == 1:
+                        petik = 0
+                    else:
+                        petik = 1
+                if listring[i] == ',' and petik == 0:
                     count += 1
-            return int(count/2)
-                # petik = 0
-                # if listring[i] == "'":
-                #     if petik == 1:
-                #         petik = 0
-                #     else:
-                #         petik = 1
-                # if listring[i] == ',' and petik == 0:
-                #     count += 1
+            return count + 1
 
 def konso(lis, value):
     pjgawal = pjglist(lis)
-    newlis = [0 for i in range(pjgawal+1)]                           # Memasukkan elemen baru ke dalam list
+    lislam = lis
+    lis = [0 for i in range(pjgawal+1)]                           # Memasukkan elemen baru ke dalam list
     for i in range(pjgawal):
-        newlis[i] = lis[i]
-    newlis[pjgawal] = value
-    return newlis
+        lis[i] = lislam[i]
+    lis[pjgawal] = value
+    return lis

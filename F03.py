@@ -65,5 +65,6 @@ def summonjin(users):
         jinbaru = [usrnjin, pwdjin, rolejin]
         #users.append(jinbaru)
         print(f'Jin {usrnjin} berhasil dipanggil')
-        users = konso(users, jinbaru)
+        return konso(users, jinbaru)
+    else:
         return users
